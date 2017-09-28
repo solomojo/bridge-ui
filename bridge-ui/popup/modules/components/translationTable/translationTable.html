@@ -1,0 +1,62 @@
+<div>
+  <!-- TABLE HEADER -->
+  <div layout="row" class="table-header">
+    <!-- SELECT ALL CHECKBOX -->
+    <div flex="5" ng-if="bulkView" class="bulk-check-holder">
+      <md-checkbox ng-model="bulkSelected[activeType]" class="md-primary" md-no-ink aria-label="checkAll" ng-change="selectAll()"></md-checkbox>
+    </div>
+    <div flex="50" class="pad-left" ng-class="{'adjust-name-title': !bulkView}" translate>header_name</div>
+    <div flex="12" class="middle-header" translate>header_source</div>
+    <div flex="33" class="adjust-translation-title" translate>header_translations</div>
+  </div>
+
+	<!-- TABLE BODY -->
+	<div layout="column" class="table-body" ng-class="{'pad-right': !bulkView}" infini-scroll limiter="rowLimiter">
+		<div layout="row" flex="none" ng-repeat="item in getEntities() | multiFilter:searchParams:showSearchBar.searchBar | orderBy:'name' track by $index"
+			id="entity-{{item.id}}" ng-click="selectEntity(item)" class="table-repeat" ng-class="{'first-in-table':$first}" ng-if="rowLimiter[$index]">
+
+			<!-- INDIVIDUAL CHECKBOX -->
+			<div flex="5" ng-if="bulkView" class="single-check">
+				<md-checkbox type="checkbox" class="md-primary" md-no-ink ng-checked="bulkSelectedItems[activeType].indexOf(item.id) > -1"
+					ng-click="toggleBulkList(item.id)" aria-label="single"></md-checkbox>
+			</div>
+
+			<!-- ENTITY NAME -->
+			<div flex="50" class="pad-left" ng-class="{'adjust-name-body': !bulkView}">
+				<span ng-click="item.view()" ng-attr-title="{{isPage(item) && 'View Page' || (isBlog(item) && 'View Blog') || 'View Content'}}">
+                    <img src="../../../../icons/ic_chat_gray_18px.svg" ng-if="isBlog(item)">
+                    <img src="../../../../icons/ic_description_gray_18px.svg" ng-if="isPage(item)">
+					{{item.name}}
+				</span>
+				<!--<p ng-if="isConfluenceBlog(item)">BLOG</p>-->
+				<a href="" ng-if="item.id === entity.id && bulkView" ng-click="setView('single')">
+					<i class="material-icons md-align">remove_red_eye</i>
+				</a>
+				<div class="entity-id" ng-if="showId">
+					id:&nbsp;{{item.id}}
+				</div>
+				<div class="entity-id" ng-if="showPath || searchingPath">
+					in:&nbsp;<span ng-bind-html="item.url | highlight:pathHighlight:showSearchBar.searchBar"></span>
+				</div>
+				<div class="entity-id" ng-if="showProfile">
+					Translation Profile:&nbsp;{{item.translation_profile_name}}
+				</div>
+			</div>
+
+			<!-- ENTITY SOURCE BUTTONS -->
+			<div flex="12">
+				<div ng-if="item.id !== entity.id" class="source-btns" entity="item" show-confirm-source-delete-dialog="showConfirmSourceDeleteDialog" show-choose-profile-dialog="showChooseProfileDialog"></div>
+				<div ng-if="item.id === entity.id" class="source-btns" entity="entity" show-confirm-source-delete-dialog="showConfirmSourceDeleteDialog" show-choose-profile-dialog="showChooseProfileDialog"></div>
+			</div>
+
+			<!-- ENTITY TARGET BUTTONS -->
+			<div flex="33">
+				<div ng-if="item.id !== entity.id" class="target-btns" on-force-download="showConfirmForceDownloadDialog" show-confirm-target-delete-dialog="showConfirmTargetDeleteDialog"
+					entity="item"></div>
+				<div ng-if="item.id === entity.id" class="target-btns" on-force-download="showConfirmForceDownloadDialog" show-confirm-target-delete-dialog="showConfirmTargetDeleteDialog"
+					entity="entity"></div>
+			</div>
+
+		</div>
+	</div>
+</div>

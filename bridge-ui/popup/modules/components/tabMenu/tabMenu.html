@@ -1,0 +1,59 @@
+<md-tabs md-dynamic-height md-selected="tabIndex">
+
+    <md-tab ng-repeat="type in connector.content_types" ng-click="showContent(type.api_name, type.display_name)">
+      <md-menu md-offset="-10 45">
+        <div ng-click="openTabMenu($mdOpenMenu, $event, type.api_name )">
+          {{type.display_name | translate}}
+          <span ng-if="bulkSelectedItems[type.api_name].length && activeType === type.api_name">
+            ({{bulkSelectedItems[activeType].length}})
+            <span class="caret"></span>
+          </span>
+        </div>
+        <!-- MENU -->
+        <md-menu-content width="4">
+          <md-menu-item>
+            <md-button ng-show="!chooseProfile" ng-click="bulkUpload()" translate="menu_upload" aria-label="upload"></md-button>
+            <md-button ng-show="chooseProfile" ng-click="bulkShowChooseProfileDialog()" translate="menu_upload" aria-label="upload"></md-button>
+          </md-menu-item>
+
+          <md-menu-item ng-class="{ 'remove-hover-color': hoverSelect}">
+            <md-button ng-click="bulkRefresh()" translate="menu_refresh" aria-label="refresh"></md-button>
+          </md-menu-item>
+
+          <md-menu-item md-prevent-menu-close="md-prevent-menu-close" class="menu-select-item">
+            <select ng-model="bulkLocale" class="request-select"
+              ng-mouseenter="hoverSelect = true" ng-mouseleave="hoverSelect = false"
+              ng-options="item.locale as item.text for item in localeList"
+              ng-change="bulkRequestTranslations(bulkLocale);bulkLocale = '';">
+              <option hidden value="" translate="select_request_translations"></option>
+            </select>
+          </md-menu-item>
+
+          <md-menu-item class="after-select-item" ng-class="{ 'remove-hover-color': hoverSelect}">
+            <md-button ng-click="bulkRequestTranslations()" translate="menu_request_all_translations" aria-label="request all"></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="bulkImport()" translate="menu_download_complete_translations" aria-label="download"></md-button>
+          </md-menu-item>
+
+          <md-menu-divider ng-show="showAdvancedOptions" class="menu-divider"></md-menu-divider>
+
+          <md-menu-item ng-show="showAdvancedOptions">
+            <md-button ng-click="bulkUpload(1)" translate="menu_upload_force" aria-label="upload force" ng-show="!chooseProfile"></md-button>
+            <md-button ng-click="bulkShowChooseProfileDialog(1)" translate="menu_upload_force" aria-label="upload force" ng-show="chooseProfile"></md-button>
+          </md-menu-item>
+          <md-menu-item ng-show="showAdvancedOptions">
+            <md-button ng-click="showBulkConfirmForceDownloadDialog()" translate="menu_download_force" aria-label="download force"></md-button>
+          </md-menu-item>
+          <md-menu-item ng-show="showAdvancedOptions">
+            <md-button ng-click="bulkDisassociate(false)" translate="menu_disassociate_translations" aria-label="disassociate"></md-button>
+          </md-menu-item>
+          <md-menu-item ng-show="showAdvancedOptions">
+            <md-button ng-click="showConfirmBulkDeleteDialog(true)" translate="menu_delete_all" aria-label="delete all"></md-button>
+          </md-menu-item>
+
+        </md-menu-content>
+      </md-menu>
+    </md-tab>
+
+</md-tabs>

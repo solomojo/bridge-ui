@@ -1,0 +1,24 @@
+<div class="loading-content" ng-if="entity.loading">
+	<img class="target-btns-loading" src="http://devzone.lingotek.com/media/lingotek-loading-indicators/lingotek-loading-50x50.gif"
+	/>
+</div>
+
+<div ng-if="!entity.loading" class="btn-group locale-btn locale-{{status}}" ng-repeat="(locale, status) in entity.statuses">
+  <span ng-if="status !== 'none' && status !== 'disabled'">
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{status | translate}} ({{locale | localeFilter : false : true}}) - {{ 'title_click_options' | translate }}">{{locale}}</button>
+    <ul class="dropdown-menu pull-right">
+      <li><a href="" ng-click="entity.viewTranslation(locale)" translate>menu_view</a></li>
+      <li role="separator" class="divider"></li>
+      <li ng-if="status === 'ready' || status === 'ready-x' || status === 'current' || status == 'ready-interim' || status == 'interim'"><a href="" ng-click="entity.importTranslation(locale)" translate>menu_download</a></li>
+      <li><a href="" ng-click="entity.editTranslation(locale)" translate>menu_edit</a></li>
+      <li><a href="" ng-click="entity.refresh(1)" translate>menu_refresh</a></li>
+      <li role="separator" class="divider"></li>
+      <li ng-show="getShowAdvanced()"><a ng-click="forceDownload(locale)" translate>menu_download_force</a></li>
+      <li><a href="" ng-click="entity.removeTranslation(locale, false)" translate>menu_disassociate</a></li>
+      <li><a href="" ng-click="showConfirmTargetDeleteDialog(entity, locale, true)" translate>menu_delete_translation</a></li>
+    </ul>
+  </span>
+  <span ng-if="status === 'none'">
+    <button type="button" class="btn" title="{{ 'title_request_translation' | translate }} ({{locale | localeFilter : false : true}})" ng-click="entity.requestTranslation(locale)">{{locale}}</button>
+  </span>
+</div>

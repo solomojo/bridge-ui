@@ -1,0 +1,120 @@
+.settings-page {
+  overflow: auto;
+  margin-bottom: 45px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #999 !important;
+  }
+
+  .connection-info{
+    width:100%;
+    background:#EEEEEE;
+    padding:10px;
+    color:#757575;
+  }
+
+  .connection-info li {
+    margin-left:10px;
+    font-size:10pt;
+  }
+
+  .options {
+    color: #868686;
+  }
+
+  .selected {
+    color:#5A95D1;
+  }
+
+  .disconnect-button {
+    background: #5A95D1;
+    border-radius:0;
+    box-shadow:0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    color:white;
+    transition:200ms;
+  }
+
+  .disconnect-button:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  }
+
+  .options .item{
+    margin-left:7px;
+  }
+
+  .rotate90{
+    transform: rotate(90deg);
+  }
+
+  .show-more{
+    transition:200ms;
+  }
+}
+
+.connected-holder {
+  cursor: pointer;
+  display: inline-block;
+  .connected-check {
+    padding-right: 4px;
+    font-size: 32px;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.disconnect-color {
+  color: #a94442;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+md-select {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+  margin-top: -7px !important;
+  margin-left: 5px !important;
+}
+
+.language-switcher-holder {
+  margin: 5px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.md-select-menu-container.md-active {
+  z-index: 500;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.version-holder {
+  margin-top: 10px;
+  cursor: default;
+}
+
+.settings-connectors-holder {
+  position: absolute;
+  bottom: 10px;
+}
+
+.connector-font {
+  font-size: 17px;
+}
+
+.pad-connector {
+  padding-right: 5px;
+}
+
+.md-green {
+  color: #149F00;
+}

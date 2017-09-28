@@ -1,0 +1,70 @@
+.connector-small {
+  width: 55px;
+  font-size: 75%;
+  padding: 5px 5px 0px 5px;
+  margin-bottom: 4px;
+}
+
+.margin-div {
+  margin-top: 35px;
+}
+
+.material-icons.yellow {
+  color: #FFCC00;
+  vertical-align: bottom;
+}
+
+.material-icons.green {
+  color: green;
+  vertical-align: bottom;
+}
+.material-icons.big {
+  font-size: 65px;
+  color: gray;
+}
+
+.add-connector-button {
+  position: relative;
+  width: 75px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #fff;
+  margin: 0px 0px;
+  line-height: normal;
+  padding: 10px 10px 0px 10px;
+  transition: 200ms;
+}
+
+.container-outer {
+  height: 95px;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.container-inner {
+  display: inline-block;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+.upper-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  display: none;
+}
+
+
+.watermark {
+  position: absolute;
+  opacity: .15;
+  top: 15px;
+  left: 0;
+  height: 200px;
+}

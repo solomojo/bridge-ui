@@ -1,0 +1,24 @@
+<div class="btn-group locale-btn locale-{{entity.source.status}}">
+    <span ng-if="!entity.loading">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{entity.source.status | translate}} ({{entity.source.locale | localeFilter : false : true}}) - {{ 'title_click_options' | translate }}">{{entity.source.locale}}</button>
+        <ul class="dropdown-menu" ng-if="entity.source.status !== 'untracked'" >
+          <li><a href="" ng-click="entity.view()" translate>menu_view</a></li>
+          <li ng-show="!getChooseProfile()"><a href="" ng-click="entity.upload()" ng-if="entity.source.status === 'edited'" translate>menu_re_upload_source</a></li>
+          <li ng-show="getChooseProfile()"><a href="" ng-click="showChooseProfileDialog(entity)" ng-if="entity.source.status === 'edited'" translate>menu_re_upload_source</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="" ng-click="entity.refresh()" translate>menu_refresh</a></li>
+          <li ng-show="!getChooseProfile()"><a href="" ng-click="entity.upload()" ng-if="entity.source.status === 'current'" translate>menu_re_upload_source</a></li>
+          <li ng-show="getChooseProfile()"><a href="" ng-click="showChooseProfileDialog(entity)" ng-if="entity.source.status === 'current'" translate>menu_re_upload_source</a></li>
+          <li><a href="" ng-click="entity.requestAllTranslations()" translate>menu_request_translations</a></li>
+          <li><a href="" ng-click="entity.importAllTranslations()" translate>menu_download_translations</a></li>
+          <li ng-show="getShowAdvanced()" role="separator" class="divider"></li>
+          <li ng-show="getShowAdvanced()"><a href="" ng-click="entity.disassociate(false)" translate>menu_disassociate</a></li>
+          <li ng-show="getShowAdvanced()"><a href="" ng-click="showConfirmSourceDeleteDialog(entity, true)" translate>menu_delete_all_translations</a></li>
+        </ul>
+        <ul class="dropdown-menu" ng-if="entity.source.status === 'untracked'" >
+          <li><a href="" ng-click="entity.view()" translate>menu_view</a></li>
+          <li ng-show="!getChooseProfile()"><a href="" ng-click="entity.upload()" translate>menu_upload_source</a></li>
+          <li ng-show="getChooseProfile()"><a href="" ng-click="showChooseProfileDialog(entity)" translate>menu_upload_source</a></li>
+        </ul>
+    </span>
+</div>

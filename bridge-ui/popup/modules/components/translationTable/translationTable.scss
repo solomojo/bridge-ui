@@ -1,0 +1,131 @@
+.table-header {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #DDDDDD;
+}
+
+.table-body {
+  margin-left: 5px;
+  overflow-y: auto;
+  height: calc(100% - 50px);
+  position: absolute;
+  width: 100%;
+}
+
+.table-repeat {
+  border-top: 1px solid #DDDDDD;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.material-icons.md-15 {
+  font-size: 15px;
+  color: #999999;
+  top: 2px;
+  position: relative;
+}
+
+.first-in-table {
+  border-width: 0px !important;
+}
+
+.adjust-name-body {
+  margin-left: 11px;
+  padding-left: 0px !important;
+}
+
+.adjust-name-title {
+  margin-left: 8px;
+  padding-left: 0px !important;
+}
+
+.single-check {
+  margin-left: 5px;
+}
+
+.adjust-header {
+  margin-left: 15px !important;
+}
+
+.middle-header {
+  margin-left: 3px;
+}
+
+.pad-left {
+  padding-left: 10px;
+}
+
+.pad-right {
+  padding-right: 25px;
+}
+
+.adjust-translation-title {
+  padding-left: 10px;
+}
+
+.entity-id {
+  font-size: 8pt;
+  color: gray;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.source-btns {
+  margin: 0;
+  padding: 0;
+  padding-right: 3px;
+  float: left;
+}
+
+.target-btns {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// override scroll bar
+::-webkit-scrollbar-thumb {
+  background: #999 !important;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+// override angular material
+md-checkbox {
+  margin-bottom: 0px !important;
+  .md-icon {
+    height: 15px !important;
+    width: 15px !important;
+    top: 2px !important;
+    left: -1px !important;
+  }
+}
+
+md-checkbox.md-checked .md-icon:after {
+  left: 3px;
+  top: 0px;
+  width: 5.67px;
+  height: 10.33px;
+}
+
+.bulk-check-holder {
+  md-checkbox:not([disabled]).md-primary .md-icon {
+    border-color: #337ab7 !important;
+  }
+}
+
+md-checkbox .md-container:before {
+  background-color: transparent !important;
+}
+
+md-checkbox:not([disabled]).md-primary.md-checked .md-icon {
+  background-color: #337ab7 !important;
+}
+
+md-checkbox.md-default-theme:not([disabled]).md-primary.md-checked .md-icon:after, md-checkbox:not([disabled]).md-primary.md-checked .md-icon:after {
+  border-color: #FFFFFF;
+}

@@ -1,0 +1,72 @@
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+  background-color: rgb(68, 135, 204) !important;
+}
+md-ink-bar {
+  bottom: 12px !important;
+}
+
+.md-tab {
+  padding: 3px 10px !important;
+  margin-top: 4px;
+  text-transform: none;
+}
+
+md-tabs-canvas {
+  height: 36px;
+}
+
+md-menu-item>.md-button, md-menu-item>.md-button:hover {
+  box-shadow: none !important;
+}
+
+md-menu-item {
+  min-height: 0 !important;
+  height: 35px !important;
+}
+
+md-menu-item>.md-button {
+  min-height: 5px;
+  margin-top: 8px;
+  height: 28px;
+  line-height: 8px;
+}
+
+.menu-select-item {
+  margin-top: 8px;
+  margin-bottom: -7px;
+  position: relative;
+  z-index: 100;
+}
+
+.after-select-item {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-divider {
+  margin-top: 10px !important;
+  margin-bottom: -5px !important;
+}
+
+.request-select:hover {
+  background-color: rgba(158,158,158,0.2);
+  option {
+    background-color: white !important;
+  }
+}
+
+.request-select {
+  background: white;
+  border: none;
+  border-bottom: solid 2px #ccc;
+  padding-left: 12px !important;
+  option {
+    font-family: 'Roboto Mono';
+  }
+}
+
+.remove-hover-color {
+  button {
+    background: white !important;
+  }
+}

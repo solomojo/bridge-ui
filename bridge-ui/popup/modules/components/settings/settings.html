@@ -1,0 +1,109 @@
+<div class="settings-page">
+  <div ng-init="showme=false">
+
+    <div class="connected-holder" ng-click="showme = !showme">
+      <i class="material-icons md-align md-green connected-check" title="connected">check</i>
+      <span class="md-align" translate>msg_connected</span>
+      <a href="#">
+        <i ng-class="{rotate90:showme}" class="material-icons md-align show-more">keyboard_arrow_right</i>
+      </a>
+    </div>
+
+    <div ng-if="showme" ng-init="showconfirm=false" class="connection-info">
+      <div ng-hide="showconfirm">
+        <a class="btn btn-sm pull-right disconnect-button" href="#" ng-click="showConfirmDisconnect()" translate>btn_disconnect</a>
+        <ul class="no-bullets">
+          <li class="no-margin"><b translate>msg_connection_details</b></li>
+          <li><span translate>msg_authenticated_user</span>: {{options.user.name}}</li>
+          <li><span translate>msg_email</span>: {{options.user.email}}</li>
+          <li><span translate>msg_connected_since</span>: {{options.user.created_at}}</li>
+          <li><span translate>msg_auth_key</span>: {{options.token}}</li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div ng-show="showconfirm" class="disconnect-color">
+        <b translate>msg_confirm_disconnect</b>
+        <p><small>msg_after_disconnect</small></p><div class="text-right">
+          <a class="btn btn-sm btn-danger md-button" href="#" ng-click="disconnect()" translate>btn_ok</a>
+          <a class="btn btn-sm btn-default md-button" href="#" ng-click="showconfirm = false" translate>btn_cancel</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="options">
+    <div translate>msg_config_options</div>
+
+    <div layout="row" class="language-switcher-holder">
+      <span translate>select_language</span>
+      <md-select ng-change="changeLanguage(currentLocale)" ng-model="currentLocale">
+        <md-option ng-repeat="locale in locales" value="{{locale}}">{{locale | localeFilter:true }}</md-option>
+      </md-select>
+    </div>
+
+    <div class="item cursor-pointer" ng-click="toggleOption('showId')">
+      <i ng-show="showId" class="material-icons md-align selected">check_box</i>
+      <i ng-hide="showId" class="material-icons md-align">check_box_outline_blank</i>
+      <span class="md-align" translate>box_show_id</span>
+    </div>
+
+    <div class="item cursor-pointer" ng-click="toggleOption('showPath')">
+      <i ng-show="showPath" class="material-icons md-align selected">check_box</i>
+      <i ng-hide="showPath" class="material-icons md-align">check_box_outline_blank</i>
+      <span class="md-align" translate>box_show_location</span>
+    </div>
+
+    <div class="item cursor-pointer" ng-click="toggleOption('showProfile')">
+      <i ng-show="showProfile" class="material-icons md-align selected">check_box</i>
+      <i ng-hide="showProfile" class="material-icons md-align">check_box_outline_blank</i>
+      <span class="md-align" translate>box_show_profile</span>
+    </div>
+
+    <div class="item cursor-pointer" ng-click="toggleOption('openNewWindow')">
+      <i ng-show="openNewWindow" class="material-icons md-align selected">check_box</i>
+      <i ng-hide="openNewWindow" class="material-icons md-align">check_box_outline_blank</i>
+      <span class="md-align" translate>box_new_window</span>
+    </div>
+
+    <div class="item cursor-pointer" ng-click="toggleOption('chooseProfile')">
+      <i ng-show="chooseProfile" class="material-icons md-align selected">check_box</i>
+      <i ng-hide="chooseProfile" class="material-icons md-align">check_box_outline_blank</i>
+      <span class="md-align" translate>box_choose_profile</span>
+    </div>
+
+    <div class="item cursor-pointer" ng-click="toggleOption('showAdvancedOptions')">
+      <i ng-show="showAdvancedOptions" class="material-icons md-align selected">check_box</i>
+      <i ng-hide="showAdvancedOptions" class="material-icons md-align">check_box_outline_blank</i>
+      <span class="md-align" translate>box_advanced_options</span>
+    </div>
+
+    <div class="item cursor-pointer" ng-if="showAdvancedOptions">
+      <md-input-container>
+        <label>URL (Delete the url to re-enable autodetect)</label>
+        <input style="width: 350px" id="set_url" ng-model="url" ng-change="saveUrl()">
+      </md-input-container>
+    </div>
+
+    <div ng-if="connector.enabled">
+      <a href="#" ng-click="connector.openSettingsPage()">
+        <i class="material-icons md-align pad-connector" title="{{connector.description}} settings">settings</i>
+        <span class="md-align">{{connector.description}}</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="options version-holder">
+    <div><span translate>msg_extension_version</span>: {{extensionVersion}}</div>
+  </div>
+
+  <div class="settings-connectors-holder">
+    <span ng-repeat="(id, connector) in connectors | filter:{connected: true}">
+      <a href="#" ng-click="openUrl(connector.connect_url)">
+        <i class="material-icons md-align md-green connector-font" title="{{connector.name}} connected">check_circle</i>
+        <span class="md-align">{{connector.name}}</span>
+      </a>
+    </span>
+  </div>
+
+</div>

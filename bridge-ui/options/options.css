@@ -1,0 +1,12 @@
+.options {
+  /*width: 200px;
+  height: 200px;*/
+  background-color: #fafafa;
+}
+#status {
+  color: rgba(68,135,204,0.9);
+  font-weight: bold;
+}
+.options table tr th {
+  text-align: right;
+}

@@ -1,0 +1,66 @@
+<div id="header-container">
+  <div class="popup-header">
+    <button class="menu-button" ng-class="{'menu-button-toggled':menuToggled}" ng-click="toggleMenu()" title="{{ 'title_menu' | translate }}">
+      <i class="material-icons md-align menu-icon">menu</i>
+    </button>
+
+    <!-- Don't put href's on these anchor tags, it causes reloading issuse -->
+    <a class="brand" ng-click="clickLogo()">
+      <img src="http://devzone.lingotek.com/media/lingotek-chevrons/lingotek-chevrons-blue-38x38.png" class="brand-img" align="absmiddle">
+      <span ng-show="connector.enabled == 1">{{connector.description}}</span>
+    </a>
+
+    <div class="fade-out" ng-class="{'add-margin': connector.detected.id !== null && activeView === 'bulk'}"></div>
+
+    <div layout="row" class="pull-right menu-button-holder">
+      <!-- SEARCH BUTTON -->
+      <a ng-click="toggleSearchBar()" ng-show="activeView === 'bulk'" title="{{ 'title_search' | translate }}" ng-class="{'search-open-color': showSearchBar.searchBar}">
+        <i class="material-icons">search</i>
+      </a>
+
+      <!-- SWITCH TO SINGLE VIEW -->
+      <a ng-show="connector.detected.id !== null && activeView === 'bulk'" ng-click="setView('single')" title="{{ 'title_switch_to_single' | translate }}">
+        <i class="material-icons">insert_drive_file</i>
+      </a>
+
+      <!-- SWITCH TO BULK VIEW -->
+      <a ng-show="connector.detected.id !== null && activeView === 'single'" ng-click="setView('bulk')" title="{{ 'title_switch_to_bulk' | translate }}">
+        <i class="material-icons">view_list</i>
+      </a>
+
+      <!-- REFRESH BUTTON -->
+      <a ng-click="refreshAll()" title="{{ 'title_refresh' | translate }}">
+        <i class="material-icons">refresh</i>
+      </a>
+
+      <!-- CLOSE BUTTON -->
+      <a class="close-button" ng-click="closeFrame()" ng-show="isFrame" title="{{ 'title_close' | translate }}">
+        <i class="material-icons">clear</i>
+      </a>
+    </div>
+  </div>
+
+  <div class="menu-backdrop" ng-if="menuToggled" ng-click="toggleMenu()"></div>
+
+  <div class="slide-menu" style="left:{{slideMenuLeft}}">
+    <button ng-show="context !== 'window'" class="slide-menu-button" ng-click="openWindow()" title="{{ 'title_open_new_window' | translate }}">
+      <i class="material-icons md-align">launch</i>
+    </button>
+    <button ng-show="context === 'window'" class="slide-menu-button" ng-click="backToPage()" title="{{ 'title_open_new_window' | translate }}">
+      <i class="material-icons md-align">input</i>
+    </button>
+    <button class="slide-menu-button" ng-click="buttonAction('connect')" title="{{ 'title_connect_app' | translate }}">
+      <i class="material-icons md-align" ng-class="{'button-active': buttonActive['connect']}">apps</i>
+    </button>
+    <button class="slide-menu-button" ng-click="buttonAction('settings')" title="{{ 'title_settings' | translate }}">
+      <i class="material-icons md-align" ng-class="{'button-active': buttonActive['settings']}">settings</i>
+    </button>
+    <button class="slide-menu-button slide-info-button" ng-hide="connector.enabled == 1" ng-click="buttonAction('info')" ng-class="{'button-active': buttonActive['info']}">
+      <i class="material-icons md-align">info</i>
+    </button>
+  </div>
+
+  <div class="menu-page" style="left:{{menuPageLeft}}">
+    <ng-include src="currentMenuPage"></ng-include>
+  </div>
+</div>

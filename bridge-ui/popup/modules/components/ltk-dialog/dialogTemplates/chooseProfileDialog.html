@@ -1,0 +1,16 @@
+<md-dialog aria-label="List dialog" style="padding: 10px;">
+    <md-dialog-content align="center" style="margin: auto">
+        <md-list>
+            <md-list-item><h4 class="md-title">Translation Profiles</h4></md-list-item>
+            <md-list-item class="md-secondary md-list-item" ng-repeat="profile in translationProfiles" >
+                <md-checkbox ng-model="selectedProfile" ng-click="upload(profile.id)" ng-hide="true"></md-checkbox>
+                <span class="md-list-item-text">
+                    <p>{{profile.name}}</p>
+                </span>
+            </md-list-item>
+        </md-list>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="closeDialog()" class="md-primary">Cancel</md-button>
+    </md-dialog-actions>
+</md-dialog>

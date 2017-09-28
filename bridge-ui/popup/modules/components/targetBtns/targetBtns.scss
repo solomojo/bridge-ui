@@ -1,0 +1,122 @@
+.target-btns-loading {
+  width: 25px;
+}
+
+.locale-btn {
+  padding-right: 1px;
+  padding-bottom: 1px;
+  span {
+    button {
+      transition: background-color 0.25s linear;
+    }
+  }
+  .btn {
+    font-size: 80%;
+    padding: 2px 4px;
+    margin: 3px;
+    color: #fff;
+    min-width: 25px;
+    font-family: 'Roboto Mono';
+  }
+  .dropdown-menu {
+    li {
+      a {
+        cursor: pointer;
+      }
+    }
+    font-size: 80%;
+    > li > a {
+      padding: 3px 10px;
+    }
+  }
+  .btn {
+    &:hover, &:active, &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.locale-none .btn {
+  background-color: #FFFFFF;
+  border: 1px solid #999999;
+  color: #999999;
+  &:hover, &:active, &:focus {
+    background-color: #FAFAFA;
+    border: 1px solid #8C8C8C;
+    color: #8C8C8C;
+  }
+}
+
+.locale-pending .btn, .locale-pending-x .btn {
+  background-color: #F37F16;
+}
+
+.locale-pending .btn:hover, .locale-pending-x .btn:hover {
+  background-color: #E67209;
+}
+
+.locale-ready .btn, .locale-ready-x .btn {
+  background-color: #2196F3;
+}
+
+.locale-ready .btn:hover, .locale-ready-x .btn:hover {
+  background-color: #1E88E5;
+}
+
+.locale-edited .btn {
+  background-color: #FFC107;
+  &:hover {
+    background-color: #FFB300;
+  }
+}
+
+.locale-current .btn {
+  background-color: #5FDC64;
+  &:hover {
+    background-color: #4ad750;
+  }
+}
+
+.locale-untracked .btn {
+  background-color: #999999;
+  &:hover {
+    background-color: #8C8C8C;
+  }
+}
+
+.locale-importing .btn {
+  background-color: #F37F16;
+  &:hover {
+    background-color: #E67209;
+  }
+}
+
+.locale-error .btn {
+  background-color: #B71C1C;
+  &:hover {
+    background-color: #9E0303;
+  }
+}
+
+.locale-ready-interim .btn {
+  background-color: #FFFFFF;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  &:hover, &:active, &:focus {
+    background-color: #FFFFFF;
+    color: #1E88E5;
+    border: 1px solid #1E88E5;
+  }
+}
+
+.locale-interim .btn {
+  background-color: #FFFFFF;
+  color: #5FDC64;
+  border: 1px solid #5FDC64;
+  &:hover, &:active, &:focus {
+    background-color: #FFFFFF;
+    color: #4AD750;
+    border: 1px solid #4AD750;
+  }
+}
+

@@ -1,0 +1,114 @@
+#header-container {
+  .menu-button-toggled {
+    background:#eee;
+  }
+  .button-active {
+    color:#5A95D1;
+  }
+}
+
+.search-open-color {
+  color: #337ab7 !important;
+}
+
+.menu-button {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 50px;
+  background: #fafafa;
+  border: none;
+  transition: 200ms;
+  &:hover {
+    background: #eee;
+  }
+}
+
+.slide-menu-button {
+  width: 100%;
+  height: 50px;
+  background: none;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.menu-button-holder {
+  z-index: 200;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #fafafa;
+}
+
+.menu-icon {
+  color: #AAAAAA;
+  font-size: 24px;
+}
+
+.brand-img {
+  width: 24px;
+  height: 24px;
+}
+
+.add-margin {
+  margin-right: 100px !important;
+}
+
+.slide-menu {
+  position: fixed;
+  height: calc(100% - 45px);
+  left: -60px;
+  top: 45px;
+  width: 50px;
+  background: #757575;
+  transition: 200ms;
+  z-index: 110;
+  box-shadow: $z1-shadow;
+}
+
+.slide-info-button {
+  position: absolute;
+  bottom: 0;
+  border: none;
+}
+
+.menu-page {
+  position: fixed;
+  left: -100%;
+  top: 45px;
+  height: calc(100% - 45px);
+  width: calc(100% - 80px);
+  transition: 200ms;
+  z-index: 100;
+  background: white;
+  padding: 10px;
+}
+
+.menu-backdrop {
+  position: fixed;
+  height: calc(100% - 45px);
+  top: 45px;
+  width: 100%;
+  left: 0;
+  background: black;
+  animation: buttonFade;
+  animation-duration: 200ms;
+  opacity: .3;
+  z-index: 90;
+}
+
+.fade-out {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  z-index: 30;
+  margin-right: 65px;
+  background: -moz-linear-gradient(left, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 87%, rgba(250,250,250,1) 100%);
+  background: -webkit-linear-gradient(left,rgba(250,250,250,0) 0%,rgba(250,250,250,1) 87%,rgba(250,250,250,1)100%);
+  background: linear-gradient(to right,rgba(250,250,250,0) 0%,rgba(250,250,250,1) 87%,rgba(250,250,250,1)100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fafafa', endColorstr='#fafafa',GradientType=1 );
+}

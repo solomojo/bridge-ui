@@ -1,0 +1,38 @@
+<div layout="column" class="table-body" ng-class="" infini-scroll limiter="rowLimiter">
+  <div ng-if="activeConnector.connector && !activeConnector.active" >
+    <img ng-src="{{activeConnector.connector.icon_path}}" class="connected watermark" title="{{connector.description}}"/>
+    <div>
+      <i class="material-icons yellow">warning</i>
+      <span><b>Account Disconnected</b></span>
+    </div>
+    <p style="padding: 10px; margin: 0">Your {{activeConnector.connector.name}} account is currently disconnected from Lingotek. Please connect your account and try again.</p><br>
+    <div layout-align="center end" style="text-align: center; padding: 24px">
+     <md-button class="md-primary md-raised btn-confirm" style="color: white" href="#" layout-align="center end" ng-click="openConnectorUrl(activeConnector)">Connect {{activeConnector.connector.name}}</md-button>
+    </div>
+  </div>
+  <div>
+    <h5><b>Your Connectors</b></h5>
+    <div class="connector" ng-repeat="(id, connector) in connectors" ng-if="!connector.connector.external">
+      <a href="#" ng-click="openConnectorUrl(connector)">
+        <img ng-src="{{connector.connector.icon_path}}" class="connected" title="{{connector.description}}"/>
+        <p>{{connector.connector.name}}</p>
+        <i class="material-icons yellow upper-right" title="Disconnected" ng-if="!connector.active">warning</i>
+        <i class="material-icons green upper-right" title="Connected" ng-if="connector.active">check</i>
+      </a>
+    </div>
+    <div class="add-connector-button" ng-click="clickLogin()">
+      <i class="material-icons big" title="Add Connector">control_point</i>
+    </div>
+  </div>
+  <div>
+    <h5><b>Also Available</b></h5>
+    <p style="color: darkorange">The power to translate is now inside...</p>
+      <div class="connector" ng-repeat="connector in availableConnectors">
+        <a href="#" ng-click="openUrl(connector.marketing_url)">
+          <img ng-src="{{connector.icon_path}}" class="connected" title=""/>
+          <p>{{connector.name}}</p>
+        </a>
+      </div>
+  </div>
+  <div class="margin-div"></div>
+</div>

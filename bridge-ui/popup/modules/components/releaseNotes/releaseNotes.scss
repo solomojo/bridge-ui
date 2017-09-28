@@ -1,0 +1,51 @@
+#releaseNotesDialog {
+  md-dialog {
+    position: absolute;
+    top: 75px;
+  }
+  .content {
+    .updated-title {
+      font-size: 18px;
+      padding-right: 15px;
+      font-weight: 600;
+    }
+    .release-details {
+      margin: 15px 0px;
+      .version {
+        font-weight: bold;
+      }
+      .date {
+        font-style: italic;
+        font-size: 14px;
+      }
+    }
+    .notes {
+      margin-bottom: 15px;
+      .noteTitle {
+        font-weight: bold;
+      }
+      #bullet-list {
+        margin-bottom: 0px;
+      }
+      .bullet-list {
+        margin-left: 15px;
+        padding-left: 15px;
+        li {
+          list-style-type: disc;
+          list-style-position: outside;
+          padding-top: 5px;
+        }
+      }
+    }
+    .close-button {
+      color: #aaa;
+      &:hover {
+        cursor: pointer;
+        color: red !important;
+      }
+      &:active {
+        color: #aaa;
+      }
+    }
+  }
+}

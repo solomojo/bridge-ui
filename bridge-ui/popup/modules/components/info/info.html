@@ -1,0 +1,9 @@
+<div>
+  <p><span translate>msg_info</span> <b> {{connector.meta.url.hostname}}</b>.</p>
+  <div class="connector">
+    <a href="#" ng-if="connector.icon_path" ng-click="openUrl(connector.connect_url)">
+      <img ng-src="{{connector.icon_path}}" />
+      <p>{{connector.name}}</p>
+    </a>
+  </div>
+</div>

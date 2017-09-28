@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "Lingotek Bridge",
+  "description": "Connect to Lingotek Cloud from within all of your applications.",
+  "version": "2.0.6",
+  "browser_action": {
+    "default_icon": "icons/lingotek-chevrons-blue-38x38.png",
+    "default_title": "Lingotek Bridge"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "listener.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/lingotek-chevrons-blue-16x16.png",
+    "48": "icons/lingotek-chevrons-blue-48x48.png",
+    "128": "icons/lingotek-chevrons-blue-128x128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "https://ajax.googleapis.com/",
+    "https://gmc.lingotek.com/*",
+    "https://mw.lingotek.com/*",
+    "http://localhost:8000/*",
+    "http://*.ngrok.io/*",
+    "https://*.ngrok.io/*"
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ https://gmc.lingotek.com/; object-src 'self'",
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": false
+  },
+  "web_accessible_resources": [
+    "app/*",
+    "lib/*",
+    "options/*",
+    "popup/*",
+    "icons/*",
+    "templates/*"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "spark",
+  "authors": [
+    "EdwardRichards <erichards@lingotek.com>",
+    "MattSmith <msmith@lingotek.com>"
+  ],
+  "description": "Easy integration",
+  "main": "",
+  "moduleType": [],
+  "license": "Private",
+  "homepage": "www.lingotek.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.2",
+    "jquery": "^2.2.2",
+    "bootstrap": "^3.3.6",
+    "checklist-model": "vitalets/checklist-model#^0.9.0",
+    "angular-bootstrap": "^1.2.5",
+    "angular-material": "^1.0.9",
+    "angular-translate": "^2.11.1",
+    "angular-translate-loader-static-files": "^2.11.1"
+  },
+  "resolutions": {
+    "angular": "1.6.0"
+  }
+}

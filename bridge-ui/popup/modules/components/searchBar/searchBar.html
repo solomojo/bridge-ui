@@ -1,0 +1,19 @@
+<div ng-if="showSearchBar.searchBar" class="search-bar-holder" ng-class="{'expand-height' : showSearchHints}">
+
+  <div class="search-content-holder">
+    <!-- <a class="hint-button" ng-click="toggleSearchHints()" title="{{ 'title_search_hints' | translate}}">
+      <i class="material-icons">help_outline</i>
+    </a> -->
+    <input id="search-filter" class="form-control" ng-model="searchModel.text" ng-keyup="change()" ng-init="focus()"
+            ng-keydown="keyDown($event)" placeholder="{{ 'title_search' | translate}} {{displayName}}..."/>
+
+    <div class="search-hint-holder" ng-show="showSearchHints">
+      in:'[directory]'
+      <br/>
+      status:'pending'
+      <br/>
+      all:'search term'
+    </div>
+
+  </div>
+</div>

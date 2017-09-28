@@ -1,0 +1,22 @@
+<div class="md-dialog-container" id="releaseNotesDialog">
+  <md-dialog layout-padding layout="column">
+    <div class="content">
+      <div layout="row" layout-align="space-between start" title="Close modal">
+        <div class="updated-title">Lingotek + {{connectorName}} has been updated!</div>
+        <i ng-click="hide()" class="material-icons close-button">clear</i>
+      </div>
+      <div class="release-details">
+        <div class="version">Version {{version}}</div>
+        <div class="date">Released: {{releaseDate}}</div>
+      </div>
+      <div>
+        <div ng-repeat="release in releaseNotes" class="notes">
+          <span class="noteTitle">{{release.title}}</span>
+          <ul class="bullet-list" id="bullet-list" ng-repeat="note in release.notes">
+            <li>{{note}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </md-dialog>
+</div>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Lingotek Connector</title>
+  <!-- build:js -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
+  <script src="modules/factories/factories.module.js"></script>
+  <script src="modules/factories/middlewareFactory/middlewareFactory.js"></script>
+  <script src="modules/factories/entityFactory/entityFactory.js"></script>
+  <script src="modules/factories/entitySetFactory/entitySetFactory.js"></script>
+  <script src="modules/factories/detectFactory/detectFactory.js"></script>
+  <script src="modules/factories/connectorFactory/connectorFactory.js"></script>
+  <script src="modules/factories/parseFactory/parseFactory.js"></script>
+  <script src="modules/factories/localeFactory/localeFactory.js"></script>
+
+  <script src="modules/components/components.module.js"></script>
+  <script src="modules/components/targetBtns/targetBtns.js"></script>
+  <script src="modules/components/sourceBtns/sourceBtns.js"></script>
+  <script src="modules/components/searchBar/searchBar.js"></script>
+  <script src="modules/components/uiMessage/uiMessage.js"></script>
+  <script src="modules/components/releaseNotes/releaseNotes.js"></script>
+  <script src="modules/components/mainHeader/mainHeader.js"></script>
+  <script src="modules/components/ltk-dialog/ltk-dialog.js"></script>
+  <script src="modules/components/tabMenu/tabMenu.js"></script>
+  <script src="modules/components/translationTable/translationTable.js"></script>
+
+  <script src="modules/directives/directives.module.js"></script>
+  <script src="modules/directives/infiniScroll/infiniScroll.js"></script>
+
+  <script src="modules/controllers/controllers.module.js"></script>
+  <script src="modules/controllers/popupController/popupController.js"></script>
+
+  <script src="modules/filters/filters.module.js"></script>
+  <script src="modules/filters/highlightFilter/highlightFilter.js"></script>
+  <script src="modules/filters/urlPathFilter/urlPathFilter.js"></script>
+  <script src="modules/filters/multiFilter/multiFilter.js"></script>
+  <script src="modules/filters/localeFilter/localeFilter.js"></script>
+
+  <script src="popup.js"></script>
+  <script src="init.js"></script>
+  <script src="../bower_components/checklist-model/checklist-model.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="../bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="../bower_components/angular-material/angular-material.min.js"></script>
+  <script src="../bower_components/angular-translate/angular-translate.js"></script>
+  <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="../bower_components/angular/angular-csp.css">
+  <!-- endbuild -->
+  <!-- build:material -->
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/condensed.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-controller="popupController" class="bridge-body">
+  <ltk-dialog ng-if="showDialog" template="dialogUrl" on-confirm="confirmDialog()" on-cancel="cancelDialog()"></ltk-dialog>
+  <ui-message></ui-message>
+  <release-notes></release-notes>
+
+  <!-- Loader -->
+  <div class="popup-loader">
+    <img src="http://devzone.lingotek.com/media/lingotek-loading-indicators/lingotek-loading-50x50.gif" />
+  </div>
+
+  <!-- Login Page -->
+  <div class="popup-login hidden" ng-class="{fill:isFrame}">
+    <div class="popup-header">
+      <a class="brand"><img src="http://devzone.lingotek.com/media/lingotek-chevrons/lingotek-chevrons-blue-38x38.png" class="login-img" align="absmiddle"
+        /> Lingotek</a>
+      <a class="pull-right close-button" ng-click="closeFrame()" ng-show="isFrame" title="Close modal">
+        <i class="material-icons">clear</i>
+      </a>
+    </div>
+
+    <div class="connect-btn-holder">
+      <button class="btn btn-default btn-block btn-lg" ng-click="clickLogin()" translate>btn_connect</button>
+    </div>
+  </div>
+
+  <!-- Container -->
+  <div class="popup-container hidden">
+    <main-header ng-if="activeView !== 'login'"></main-header>
+
+    <!-- Content -->
+    <div class="popup-content fill-height">
+      <!-- Single Content Page -->
+      <div ng-if="translatable && activeView === 'single'">
+        <translation-table bulk-view="false"></translation-table>
+        <div ng-if="loading_list" class="loading-content-lg backgroundCover">
+          <img src="http://devzone.lingotek.com/media/lingotek-loading-indicators/lingotek-loading-50x50.gif" />
+        </div>
+      </div>
+
+      <div ng-if="!translatable && activeView === 'single'">
+        <p>
+          <strong translate>msg_cannot_translate</strong>
+        </p>
+      </div>
+
+      <!-- Bulk Management Page -->
+      <div ng-show="activeView === 'bulk'" layout="column" class="fill-height" ng-class="{'search-open-menu' : showSearchBar.searchBar}">
+
+        <div class="progress" ng-if="progress > 0 && progress < 100">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100"
+            style="width: {{progress}}%"></div>
+        </div>
+
+        <tab-menu></tab-menu>
+
+        <search-bar></search-bar>
+
+        <div ng-if="loading_list" class="loading-content-lg backgroundCover">
+          <img src="http://devzone.lingotek.com/media/lingotek-loading-indicators/lingotek-loading-50x50.gif" />
+        </div>
+
+        <div ng-if="!loading_list" class="backgroundCover fill-height">
+          <translation-table bulk-view="true"></translation-table>
+        </div>
+      </div>
+
+      <!-- Connect Page -->
+      <ng-include ng-if="activeView === 'connect'" src="'modules/components/connect/connect.html'"></ng-include>
+    </div>
+  </div>
+  <!-- End: Container -->
+</body>
+
+</html>
