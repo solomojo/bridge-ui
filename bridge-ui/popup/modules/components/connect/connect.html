@@ -7,11 +7,11 @@
     </div>
     <p style="padding: 10px; margin: 0">Your {{activeConnector.connector.name}} account is currently disconnected from Lingotek. Please connect your account and try again.</p><br>
     <div layout-align="center end" style="text-align: center; padding: 24px">
-     <md-button class="md-primary md-raised btn-confirm" style="color: white" href="#" layout-align="center end" ng-click="openConnectorUrl(activeConnector)">Connect {{activeConnector.connector.name}}</md-button>
+      <md-button class="md-primary md-raised btn-confirm" style="color: white" href="#" layout-align="center end" ng-click="openConnectorUrl(activeConnector)">Connect {{activeConnector.connector.name}}</md-button>
     </div>
   </div>
   <div>
-    <h5><b>Your Connectors</b></h5>
+    <h5 translate><b>connect_title</b></h5>
     <div class="connector" ng-repeat="(id, connector) in connectors" ng-if="!connector.connector.external">
       <a href="#" ng-click="openConnectorUrl(connector)">
         <img ng-src="{{connector.connector.icon_path}}" class="connected" title="{{connector.description}}"/>
@@ -25,14 +25,14 @@
     </div>
   </div>
   <div>
-    <h5><b>Also Available</b></h5>
-    <p style="color: darkorange">The power to translate is now inside...</p>
-      <div class="connector" ng-repeat="connector in availableConnectors">
-        <a href="#" ng-click="openUrl(connector.marketing_url)">
-          <img ng-src="{{connector.icon_path}}" class="connected" title=""/>
-          <p>{{connector.name}}</p>
-        </a>
-      </div>
+    <h5 translate><b>also_available</b></h5>
+    <p style="color: darkorange" translate>translate_power</p>
+    <div class="connector" ng-repeat="connector in availableConnectors">
+      <a href="#" ng-click="openUrl(connector.marketing_url)">
+        <img ng-src="{{connector.icon_path}}" class="connected" title=""/>
+        <p>{{connector.name}}</p>
+      </a>
+    </div>
   </div>
   <div class="margin-div"></div>
 </div>

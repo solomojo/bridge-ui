@@ -4,7 +4,6 @@ angular.module('app.filters').filter('localeFilter', ['$sce', function($sce) {
     if (!localeCode) {
       return;
     }
-    localeCode = localeCode.replace('-', '_');
     var myLocale = localeList[localeCode];
     var toReturn = '';
     if (languageOnly) {
@@ -23,8 +22,8 @@ angular.module('app.filters').filter('localeFilter', ['$sce', function($sce) {
 }]);
 
 var localeList = {
-  "ar_AE": {
-    "locale": "ar_AE",
+  "ar-AE": {
+    "locale": "ar-AE",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -34,8 +33,8 @@ var localeList = {
     "tms_id": "8",
     "language_name_en": "Arabic"
   },
-  "ar_AF": {
-    "locale": "ar_AF",
+  "ar-AF": {
+    "locale": "ar-AF",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -45,8 +44,8 @@ var localeList = {
     "tms_id": "9",
     "language_name_en": "Arabic"
   },
-  "ar_BH": {
-    "locale": "ar_BH",
+  "ar-BH": {
+    "locale": "ar-BH",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -56,8 +55,8 @@ var localeList = {
     "tms_id": "10",
     "language_name_en": "Arabic"
   },
-  "ar_DZ": {
-    "locale": "ar_DZ",
+  "ar-DZ": {
+    "locale": "ar-DZ",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -67,8 +66,8 @@ var localeList = {
     "tms_id": "11",
     "language_name_en": "Arabic"
   },
-  "ar_EG": {
-    "locale": "ar_EG",
+  "ar-EG": {
+    "locale": "ar-EG",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -78,8 +77,8 @@ var localeList = {
     "tms_id": "12",
     "language_name_en": "Arabic"
   },
-  "ar_IQ": {
-    "locale": "ar_IQ",
+  "ar-IQ": {
+    "locale": "ar-IQ",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -89,8 +88,8 @@ var localeList = {
     "tms_id": "13",
     "language_name_en": "Arabic"
   },
-  "ar_JO": {
-    "locale": "ar_JO",
+  "ar-JO": {
+    "locale": "ar-JO",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -100,8 +99,8 @@ var localeList = {
     "tms_id": "14",
     "language_name_en": "Arabic"
   },
-  "ar_LY": {
-    "locale": "ar_LY",
+  "ar-LY": {
+    "locale": "ar-LY",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -111,8 +110,8 @@ var localeList = {
     "tms_id": "15",
     "language_name_en": "Arabic"
   },
-  "ar_MA": {
-    "locale": "ar_MA",
+  "ar-MA": {
+    "locale": "ar-MA",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -122,8 +121,8 @@ var localeList = {
     "tms_id": "16",
     "language_name_en": "Arabic"
   },
-  "ar_MR": {
-    "locale": "ar_MR",
+  "ar-MR": {
+    "locale": "ar-MR",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -133,8 +132,8 @@ var localeList = {
     "tms_id": "17",
     "language_name_en": "Arabic"
   },
-  "ar_OM": {
-    "locale": "ar_OM",
+  "ar-OM": {
+    "locale": "ar-OM",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -144,8 +143,8 @@ var localeList = {
     "tms_id": "18",
     "language_name_en": "Arabic"
   },
-  "ar_SA": {
-    "locale": "ar_SA",
+  "ar-SA": {
+    "locale": "ar-SA",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -155,8 +154,8 @@ var localeList = {
     "tms_id": "19",
     "language_name_en": "Arabic"
   },
-  "ar_SD": {
-    "locale": "ar_SD",
+  "ar-SD": {
+    "locale": "ar-SD",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -166,8 +165,8 @@ var localeList = {
     "tms_id": "20",
     "language_name_en": "Arabic"
   },
-  "ar_SY": {
-    "locale": "ar_SY",
+  "ar-SY": {
+    "locale": "ar-SY",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -177,8 +176,8 @@ var localeList = {
     "tms_id": "21",
     "language_name_en": "Arabic"
   },
-  "ar_TD": {
-    "locale": "ar_TD",
+  "ar-TD": {
+    "locale": "ar-TD",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -188,8 +187,8 @@ var localeList = {
     "tms_id": "22",
     "language_name_en": "Arabic"
   },
-  "ar_TN": {
-    "locale": "ar_TN",
+  "ar-TN": {
+    "locale": "ar-TN",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -199,8 +198,8 @@ var localeList = {
     "tms_id": "23",
     "language_name_en": "Arabic"
   },
-  "ar_UZ": {
-    "locale": "ar_UZ",
+  "ar-UZ": {
+    "locale": "ar-UZ",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -210,8 +209,8 @@ var localeList = {
     "tms_id": "24",
     "language_name_en": "Arabic"
   },
-  "ar_YE": {
-    "locale": "ar_YE",
+  "ar-YE": {
+    "locale": "ar-YE",
     "language_code": "ar",
     "language_name": "Arabic",
     "language_native_name": "العربية",
@@ -232,8 +231,8 @@ var localeList = {
     "tms_id": "7",
     "language_name_en": "Arabic (Standard)"
   },
-  "bg_BG": {
-    "locale": "bg_BG",
+  "bg-BG": {
+    "locale": "bg-BG",
     "language_code": "bg",
     "language_name": "Bulgarian",
     "language_native_name": "български език",
@@ -243,8 +242,8 @@ var localeList = {
     "tms_id": "32",
     "language_name_en": "Bulgarian"
   },
-  "ca_ES": {
-    "locale": "ca_ES",
+  "ca-ES": {
+    "locale": "ca-ES",
     "language_code": "ca",
     "language_name": "Catalan",
     "language_native_name": "Català",
@@ -254,8 +253,8 @@ var localeList = {
     "tms_id": "40",
     "language_name_en": "Catalan"
   },
-  "zh_CN": {
-    "locale": "zh_CN",
+  "zh-CN": {
+    "locale": "zh-CN",
     "language_code": "zh",
     "language_name": "Chinese",
     "language_native_name": "中文",
@@ -265,8 +264,8 @@ var localeList = {
     "tms_id": "234",
     "language_name_en": "Chinese"
   },
-  "zh_HK": {
-    "locale": "zh_HK",
+  "zh-HK": {
+    "locale": "zh-HK",
     "language_code": "zh",
     "language_name": "Chinese",
     "language_native_name": "中文",
@@ -276,8 +275,8 @@ var localeList = {
     "tms_id": "235",
     "language_name_en": "Chinese"
   },
-  "zh_SG": {
-    "locale": "zh_SG",
+  "zh-SG": {
+    "locale": "zh-SG",
     "language_code": "zh",
     "language_name": "Chinese",
     "language_native_name": "中文",
@@ -287,8 +286,8 @@ var localeList = {
     "tms_id": "236",
     "language_name_en": "Chinese"
   },
-  "zh_TW": {
-    "locale": "zh_TW",
+  "zh-TW": {
+    "locale": "zh-TW",
     "language_code": "zh",
     "language_name": "Chinese",
     "language_native_name": "中文",
@@ -298,8 +297,8 @@ var localeList = {
     "tms_id": "237",
     "language_name_en": "Chinese"
   },
-  "cs_CZ": {
-    "locale": "cs_CZ",
+  "cs-CZ": {
+    "locale": "cs-CZ",
     "language_code": "cs",
     "language_name": "Czech",
     "language_native_name": "čeština",
@@ -309,8 +308,8 @@ var localeList = {
     "tms_id": "50",
     "language_name_en": "Czech"
   },
-  "da_DK": {
-    "locale": "da_DK",
+  "da-DK": {
+    "locale": "da-DK",
     "language_code": "da",
     "language_name": "Danish",
     "language_native_name": "Dansk",
@@ -320,8 +319,8 @@ var localeList = {
     "tms_id": "52",
     "language_name_en": "Danish"
   },
-  "nl_NL": {
-    "locale": "nl_NL",
+  "nl-NL": {
+    "locale": "nl-NL",
     "language_code": "nl",
     "language_name": "Dutch",
     "language_native_name": "Nederlands",
@@ -331,8 +330,8 @@ var localeList = {
     "tms_id": "163",
     "language_name_en": "Dutch"
   },
-  "nl_BE": {
-    "locale": "nl_BE",
+  "nl-BE": {
+    "locale": "nl-BE",
     "language_code": "nl",
     "language_name": "Dutch",
     "language_native_name": "Nederlands",
@@ -342,8 +341,8 @@ var localeList = {
     "tms_id": "239",
     "language_name_en": "Dutch"
   },
-  "en_AU": {
-    "locale": "en_AU",
+  "en-AU": {
+    "locale": "en-AU",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -353,8 +352,8 @@ var localeList = {
     "tms_id": "60",
     "language_name_en": "English"
   },
-  "en_CA": {
-    "locale": "en_CA",
+  "en-CA": {
+    "locale": "en-CA",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -364,8 +363,8 @@ var localeList = {
     "tms_id": "61",
     "language_name_en": "English"
   },
-  "en_GB": {
-    "locale": "en_GB",
+  "en-GB": {
+    "locale": "en-GB",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -375,8 +374,8 @@ var localeList = {
     "tms_id": "62",
     "language_name_en": "English"
   },
-  "en_US": {
-    "locale": "en_US",
+  "en-US": {
+    "locale": "en-US",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -386,8 +385,8 @@ var localeList = {
     "tms_id": "63",
     "language_name_en": "English"
   },
-  "en_ZA": {
-    "locale": "en_ZA",
+  "en-ZA": {
+    "locale": "en-ZA",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -397,8 +396,8 @@ var localeList = {
     "tms_id": "64",
     "language_name_en": "English"
   },
-  "en_IE": {
-    "locale": "en_IE",
+  "en-IE": {
+    "locale": "en-IE",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -408,8 +407,8 @@ var localeList = {
     "tms_id": "250",
     "language_name_en": "English"
   },
-  "en_IN": {
-    "locale": "en_IN",
+  "en-IN": {
+    "locale": "en-IN",
     "language_code": "en",
     "language_name": "English",
     "language_native_name": "English",
@@ -419,8 +418,8 @@ var localeList = {
     "tms_id": "252",
     "language_name_en": "English"
   },
-  "et_EE": {
-    "locale": "et_EE",
+  "et-EE": {
+    "locale": "et-EE",
     "language_code": "et",
     "language_name": "Estonian",
     "language_native_name": "Eesti",
@@ -430,8 +429,8 @@ var localeList = {
     "tms_id": "87",
     "language_name_en": "Estonian"
   },
-  "fa_IR": {
-    "locale": "fa_IR",
+  "fa-IR": {
+    "locale": "fa-IR",
     "language_code": "fa",
     "language_name": "Farsi (Persian)",
     "language_native_name": "فارسی",
@@ -441,8 +440,8 @@ var localeList = {
     "tms_id": "89",
     "language_name_en": "Farsi (Persian)"
   },
-  "fi_FI": {
-    "locale": "fi_FI",
+  "fi-FI": {
+    "locale": "fi-FI",
     "language_code": "fi",
     "language_name": "Finnish",
     "language_native_name": "Suomi",
@@ -452,8 +451,8 @@ var localeList = {
     "tms_id": "91",
     "language_name_en": "Finnish"
   },
-  "fr_CA": {
-    "locale": "fr_CA",
+  "fr-CA": {
+    "locale": "fr-CA",
     "language_code": "fr",
     "language_name": "French",
     "language_native_name": "Fran\u00E7ais",
@@ -463,8 +462,8 @@ var localeList = {
     "tms_id": "95",
     "language_name_en": "French"
   },
-  "fr_FR": {
-    "locale": "fr_FR",
+  "fr-FR": {
+    "locale": "fr-FR",
     "language_code": "fr",
     "language_name": "French",
     "language_native_name": "Fran\u00E7ais",
@@ -474,8 +473,8 @@ var localeList = {
     "tms_id": "96",
     "language_name_en": "French"
   },
-  "fr_CH": {
-    "locale": "fr_CH",
+  "fr-CH": {
+    "locale": "fr-CH",
     "language_code": "fr",
     "language_name": "French",
     "language_native_name": "Fran\u00E7ais",
@@ -485,8 +484,8 @@ var localeList = {
     "tms_id": "242",
     "language_name_en": "French"
   },
-  "fr_US": {
-    "locale": "fr_US",
+  "fr-US": {
+    "locale": "fr-US",
     "language_code": "fr",
     "language_name": "French",
     "language_native_name": "Fran\u00E7ais",
@@ -496,8 +495,8 @@ var localeList = {
     "tms_id": "97",
     "language_name_en": "French (Cajun)"
   },
-  "de_DE": {
-    "locale": "de_DE",
+  "de-DE": {
+    "locale": "de-DE",
     "language_code": "de",
     "language_name": "German",
     "language_native_name": "Deutsch",
@@ -507,8 +506,8 @@ var localeList = {
     "tms_id": "53",
     "language_name_en": "German"
   },
-  "de_CH": {
-    "locale": "de_CH",
+  "de-CH": {
+    "locale": "de-CH",
     "language_code": "de",
     "language_name": "German",
     "language_native_name": "Deutsch",
@@ -518,8 +517,8 @@ var localeList = {
     "tms_id": "240",
     "language_name_en": "German"
   },
-  "de_AT": {
-    "locale": "de_AT",
+  "de-AT": {
+    "locale": "de-AT",
     "language_code": "de",
     "language_name": "German",
     "language_native_name": "Deutsch",
@@ -529,8 +528,8 @@ var localeList = {
     "tms_id": "243",
     "language_name_en": "German"
   },
-  "el_GR": {
-    "locale": "el_GR",
+  "el-GR": {
+    "locale": "el-GR",
     "language_code": "el",
     "language_name": "Greek",
     "language_native_name": "ελληνικά",
@@ -540,8 +539,8 @@ var localeList = {
     "tms_id": "59",
     "language_name_en": "Greek"
   },
-  "he_IL": {
-    "locale": "he_IL",
+  "he-IL": {
+    "locale": "he-IL",
     "language_code": "he",
     "language_name": "Hebrew",
     "language_native_name": "עִברִית",
@@ -551,8 +550,8 @@ var localeList = {
     "tms_id": "108",
     "language_name_en": "Hebrew"
   },
-  "ht_HT": {
-    "locale": "ht_HT",
+  "ht-HT": {
+    "locale": "ht-HT",
     "language_code": "ht",
     "language_name": "Haitian Creole",
     "language_native_name": "Kreyòl ayisyen",
@@ -562,8 +561,8 @@ var localeList = {
     "tms_id": "113",
     "language_name_en": "Haitian Creole"
   },
-  "hi_IN": {
-    "locale": "hi_IN",
+  "hi-IN": {
+    "locale": "hi-IN",
     "language_code": "hi",
     "language_name": "Hindi",
     "language_native_name": "\"हिन्दी",
@@ -574,8 +573,8 @@ var localeList = {
     "undefined": "109",
     "language_name_en": "Hindi"
   },
-  "hu_HU": {
-    "locale": "hu_HU",
+  "hu-HU": {
+    "locale": "hu-HU",
     "language_code": "hu",
     "language_name": "Hungarian",
     "language_native_name": "Magyar",
@@ -585,8 +584,8 @@ var localeList = {
     "tms_id": "114",
     "language_name_en": "Hungarian"
   },
-  "id_ID": {
-    "locale": "id_ID",
+  "id-ID": {
+    "locale": "id-ID",
     "language_code": "id",
     "language_name": "Indonesian",
     "language_native_name": "Indonesian",
@@ -596,8 +595,8 @@ var localeList = {
     "tms_id": "116",
     "language_name_en": "Indonesian"
   },
-  "it_IT": {
-    "locale": "it_IT",
+  "it-IT": {
+    "locale": "it-IT",
     "language_code": "it",
     "language_name": "Italian",
     "language_native_name": "Italiano",
@@ -607,8 +606,8 @@ var localeList = {
     "tms_id": "120",
     "language_name_en": "Italian"
   },
-  "it_CH": {
-    "locale": "it_CH",
+  "it-CH": {
+    "locale": "it-CH",
     "language_code": "it",
     "language_name": "Italian",
     "language_native_name": "Italiano",
@@ -618,8 +617,8 @@ var localeList = {
     "tms_id": "241",
     "language_name_en": "Italian"
   },
-  "ja_JP": {
-    "locale": "ja_JP",
+  "ja-JP": {
+    "locale": "ja-JP",
     "language_code": "ja",
     "language_name": "Japanese",
     "language_native_name": "日本語",
@@ -629,8 +628,8 @@ var localeList = {
     "tms_id": "121",
     "language_name_en": "Japanese"
   },
-  "ko_KR": {
-    "locale": "ko_KR",
+  "ko-KR": {
+    "locale": "ko-KR",
     "language_code": "ko",
     "language_name": "Korean",
     "language_native_name": "한국어",
@@ -640,8 +639,8 @@ var localeList = {
     "tms_id": "132",
     "language_name_en": "Korean"
   },
-  "lv_LV": {
-    "locale": "lv_LV",
+  "lv-LV": {
+    "locale": "lv-LV",
     "language_code": "lv",
     "language_name": "Latvian",
     "language_native_name": "Latviešu valoda",
@@ -651,8 +650,8 @@ var localeList = {
     "tms_id": "145",
     "language_name_en": "Latvian"
   },
-  "lt_LT": {
-    "locale": "lt_LT",
+  "lt-LT": {
+    "locale": "lt-LT",
     "language_code": "lt",
     "language_name": "Lithuanian",
     "language_native_name": "Lietuvių kalba",
@@ -662,8 +661,8 @@ var localeList = {
     "tms_id": "143",
     "language_name_en": "Lithuanian"
   },
-  "ms_MY": {
-    "locale": "ms_MY",
+  "ms-MY": {
+    "locale": "ms-MY",
     "language_code": "ms",
     "language_name": "Malay Bahasa Melayu",
     "language_native_name": "بهاس ملايو‎",
@@ -673,8 +672,8 @@ var localeList = {
     "tms_id": "154",
     "language_name_en": "Malay Bahasa Melayu"
   },
-  "mt_MT": {
-    "locale": "mt_MT",
+  "mt-MT": {
+    "locale": "mt-MT",
     "language_code": "mt",
     "language_name": "Maltese",
     "language_native_name": "Malti",
@@ -684,8 +683,8 @@ var localeList = {
     "tms_id": "155",
     "language_name_en": "Maltese"
   },
-  "no_NO": {
-    "locale": "no_NO",
+  "no-NO": {
+    "locale": "no-NO",
     "language_code": "no",
     "language_name": "Norwegian",
     "language_native_name": "Norsk",
@@ -695,8 +694,8 @@ var localeList = {
     "tms_id": "165",
     "language_name_en": "Norwegian"
   },
-  "pl_PL": {
-    "locale": "pl_PL",
+  "pl-PL": {
+    "locale": "pl-PL",
     "language_code": "pl",
     "language_name": "Polish",
     "language_native_name": "Język polski",
@@ -706,8 +705,8 @@ var localeList = {
     "tms_id": "177",
     "language_name_en": "Polish"
   },
-  "pt_BR": {
-    "locale": "pt_BR",
+  "pt-BR": {
+    "locale": "pt-BR",
     "language_code": "pt",
     "language_name": "Portuguese",
     "language_native_name": "Português",
@@ -717,8 +716,8 @@ var localeList = {
     "tms_id": "179",
     "language_name_en": "Portuguese"
   },
-  "pt_PT": {
-    "locale": "pt_PT",
+  "pt-PT": {
+    "locale": "pt-PT",
     "language_code": "pt",
     "language_name": "Portuguese",
     "language_native_name": "Português",
@@ -728,8 +727,8 @@ var localeList = {
     "tms_id": "180",
     "language_name_en": "Portuguese"
   },
-  "ro_RO": {
-    "locale": "ro_RO",
+  "ro-RO": {
+    "locale": "ro-RO",
     "language_code": "ro",
     "language_name": "Romanian",
     "language_native_name": "Limba Română",
@@ -739,8 +738,8 @@ var localeList = {
     "tms_id": "185",
     "language_name_en": "Romanian"
   },
-  "ru_RU": {
-    "locale": "ru_RU",
+  "ru-RU": {
+    "locale": "ru-RU",
     "language_code": "ru",
     "language_name": "Russian",
     "language_native_name": "Русский",
@@ -750,8 +749,8 @@ var localeList = {
     "tms_id": "186",
     "language_name_en": "Russian"
   },
-  "sk_SK": {
-    "locale": "sk_SK",
+  "sk-SK": {
+    "locale": "sk-SK",
     "language_code": "sk",
     "language_name": "Slovak",
     "language_native_name": "सराइकी",
@@ -761,8 +760,8 @@ var localeList = {
     "tms_id": "193",
     "language_name_en": "Slovak"
   },
-  "sl_SI": {
-    "locale": "sl_SI",
+  "sl-SI": {
+    "locale": "sl-SI",
     "language_code": "sl",
     "language_name": "Slovenian",
     "language_native_name": "Slovenski jezik",
@@ -772,8 +771,8 @@ var localeList = {
     "tms_id": "194",
     "language_name_en": "Slovenian"
   },
-  "es_AR": {
-    "locale": "es_AR",
+  "es-AR": {
+    "locale": "es-AR",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -783,8 +782,8 @@ var localeList = {
     "tms_id": "66",
     "language_name_en": "Spanish"
   },
-  "es_BO": {
-    "locale": "es_BO",
+  "es-BO": {
+    "locale": "es-BO",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -794,8 +793,8 @@ var localeList = {
     "tms_id": "67",
     "language_name_en": "Spanish"
   },
-  "es_CL": {
-    "locale": "es_CL",
+  "es-CL": {
+    "locale": "es-CL",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -805,8 +804,8 @@ var localeList = {
     "tms_id": "68",
     "language_name_en": "Spanish"
   },
-  "es_CO": {
-    "locale": "es_CO",
+  "es-CO": {
+    "locale": "es-CO",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -816,8 +815,8 @@ var localeList = {
     "tms_id": "69",
     "language_name_en": "Spanish"
   },
-  "es_CR": {
-    "locale": "es_CR",
+  "es-CR": {
+    "locale": "es-CR",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -827,8 +826,8 @@ var localeList = {
     "tms_id": "70",
     "language_name_en": "Spanish"
   },
-  "es_CU": {
-    "locale": "es_CU",
+  "es-CU": {
+    "locale": "es-CU",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -838,8 +837,8 @@ var localeList = {
     "tms_id": "71",
     "language_name_en": "Spanish"
   },
-  "es_DO": {
-    "locale": "es_DO",
+  "es-DO": {
+    "locale": "es-DO",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -849,8 +848,8 @@ var localeList = {
     "tms_id": "72",
     "language_name_en": "Spanish"
   },
-  "es_EC": {
-    "locale": "es_EC",
+  "es-EC": {
+    "locale": "es-EC",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -860,8 +859,8 @@ var localeList = {
     "tms_id": "73",
     "language_name_en": "Spanish"
   },
-  "es_ES": {
-    "locale": "es_ES",
+  "es-ES": {
+    "locale": "es-ES",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -871,8 +870,8 @@ var localeList = {
     "tms_id": "74",
     "language_name_en": "Spanish"
   },
-  "es_GT": {
-    "locale": "es_GT",
+  "es-GT": {
+    "locale": "es-GT",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -882,8 +881,8 @@ var localeList = {
     "tms_id": "75",
     "language_name_en": "Spanish"
   },
-  "es_HN": {
-    "locale": "es_HN",
+  "es-HN": {
+    "locale": "es-HN",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -893,8 +892,8 @@ var localeList = {
     "tms_id": "76",
     "language_name_en": "Spanish"
   },
-  "es_MX": {
-    "locale": "es_MX",
+  "es-MX": {
+    "locale": "es-MX",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -904,8 +903,8 @@ var localeList = {
     "tms_id": "77",
     "language_name_en": "Spanish"
   },
-  "es_NI": {
-    "locale": "es_NI",
+  "es-NI": {
+    "locale": "es-NI",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -915,8 +914,8 @@ var localeList = {
     "tms_id": "78",
     "language_name_en": "Spanish"
   },
-  "es_PA": {
-    "locale": "es_PA",
+  "es-PA": {
+    "locale": "es-PA",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -926,8 +925,8 @@ var localeList = {
     "tms_id": "79",
     "language_name_en": "Spanish"
   },
-  "es_PE": {
-    "locale": "es_PE",
+  "es-PE": {
+    "locale": "es-PE",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -937,8 +936,8 @@ var localeList = {
     "tms_id": "80",
     "language_name_en": "Spanish"
   },
-  "es_PR": {
-    "locale": "es_PR",
+  "es-PR": {
+    "locale": "es-PR",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -948,8 +947,8 @@ var localeList = {
     "tms_id": "81",
     "language_name_en": "Spanish"
   },
-  "es_PY": {
-    "locale": "es_PY",
+  "es-PY": {
+    "locale": "es-PY",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -959,8 +958,8 @@ var localeList = {
     "tms_id": "82",
     "language_name_en": "Spanish"
   },
-  "es_SV": {
-    "locale": "es_SV",
+  "es-SV": {
+    "locale": "es-SV",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -970,8 +969,8 @@ var localeList = {
     "tms_id": "83",
     "language_name_en": "Spanish"
   },
-  "es_UY": {
-    "locale": "es_UY",
+  "es-UY": {
+    "locale": "es-UY",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -981,8 +980,8 @@ var localeList = {
     "tms_id": "85",
     "language_name_en": "Spanish"
   },
-  "es_VE": {
-    "locale": "es_VE",
+  "es-VE": {
+    "locale": "es-VE",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -992,8 +991,8 @@ var localeList = {
     "tms_id": "86",
     "language_name_en": "Spanish"
   },
-  "es_US": {
-    "locale": "es_US",
+  "es-US": {
+    "locale": "es-US",
     "language_code": "es",
     "language_name": "Spanish",
     "language_native_name": "Espa\u00F1ol",
@@ -1014,8 +1013,8 @@ var localeList = {
     "tms_id": "251",
     "language_name_en": "Spanish"
   },
-  "sw_TZ": {
-    "locale": "sw_TZ",
+  "sw-TZ": {
+    "locale": "sw-TZ",
     "language_code": "sw",
     "language_name": "Swahili",
     "language_native_name": "Kiswahili",
@@ -1025,8 +1024,8 @@ var localeList = {
     "tms_id": "204",
     "language_name_en": "Swahili"
   },
-  "sv_SE": {
-    "locale": "sv_SE",
+  "sv-SE": {
+    "locale": "sv-SE",
     "language_code": "sv",
     "language_name": "Swedish",
     "language_native_name": "Svenska",
@@ -1036,8 +1035,8 @@ var localeList = {
     "tms_id": "203",
     "language_name_en": "Swedish"
   },
-  "th_TH": {
-    "locale": "th_TH",
+  "th-TH": {
+    "locale": "th-TH",
     "language_code": "th",
     "language_name": "Thai",
     "language_native_name": "ไทย",
@@ -1047,8 +1046,8 @@ var localeList = {
     "tms_id": "208",
     "language_name_en": "Thai"
   },
-  "tr_TR": {
-    "locale": "tr_TR",
+  "tr-TR": {
+    "locale": "tr-TR",
     "language_code": "tr",
     "language_name": "Turkish",
     "language_native_name": "Türk\u00E7e",
@@ -1058,8 +1057,8 @@ var localeList = {
     "tms_id": "215",
     "language_name_en": "Turkish"
   },
-  "uk_UA": {
-    "locale": "uk_UA",
+  "uk-UA": {
+    "locale": "uk-UA",
     "language_code": "uk",
     "language_name": "Ukrainian",
     "language_native_name": "українська мова",
@@ -1069,8 +1068,8 @@ var localeList = {
     "tms_id": "222",
     "language_name_en": "Ukrainian"
   },
-  "ur_PK": {
-    "locale": "ur_PK",
+  "ur-PK": {
+    "locale": "ur-PK",
     "language_code": "ur",
     "language_name": "Urdu",
     "language_native_name": "اردو",
@@ -1080,8 +1079,8 @@ var localeList = {
     "tms_id": "224",
     "language_name_en": "Urdu"
   },
-  "vi_VN": {
-    "locale": "vi_VN",
+  "vi-VN": {
+    "locale": "vi-VN",
     "language_code": "vi",
     "language_name": "Vietnamese",
     "language_native_name": "Việtnam",
@@ -1091,8 +1090,8 @@ var localeList = {
     "tms_id": "227",
     "language_name_en": "Vietnamese"
   },
-  "cy_GB": {
-    "locale": "cy_GB",
+  "cy-GB": {
+    "locale": "cy-GB",
     "language_code": "cy",
     "language_name": "Welsh",
     "language_native_name": "Cymraeg",

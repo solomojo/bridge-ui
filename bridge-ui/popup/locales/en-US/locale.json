@@ -22,6 +22,10 @@
   "msg_extension_version": "Extension Version",
   "msg_cannot_translate": "This content type is not currently translatable.",
 
+  "connect_title": "Your Connectors",
+  "also_available": "Also Available",
+  "translate_power": "The power to translate is now inside...",
+
   "box_show_id": "Show <i>id</i> on entities",
   "box_show_location": "Show entity locations",
   "box_new_window": "Always open in new window",
@@ -85,6 +89,7 @@
   "error_remove_translation": "There was an error removing the translation",
   "error_diss_content": "There was an error disassociating your content",
   "error_retrieve_translation": "Could not retrieve translation info, have you connected your site?",
+  "set_url_setting": "URL (Delete the url to re-enable autodetect)",
 
   "Pages": "Pages",
   "Blog Posts": "Blog Posts",

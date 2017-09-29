@@ -4,10 +4,10 @@ angular.module('app.controllers').controller('popupController', ['$scope', '$sce
     $scope.activeView = 'loading';
     $scope.activeType = null;
     $scope.locales = [
-      'en_US',
-      'de_DE',
-      'fr_FR',
-      'es_ES'
+      'en-US',
+      'de-DE',
+      'fr-FR',
+      'es-ES'
     ];
     if (CONFIG.error === undefined) {
       $scope.options = CONFIG.chrome.options;

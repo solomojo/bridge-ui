@@ -25,7 +25,7 @@ var app = angular.module('popupApp', [
       prefix: 'locales/',
       suffix: '/locale.json'
     });
-    $translateProvider.preferredLanguage('en_US');
+    $translateProvider.preferredLanguage('en-US');
   }])
 
   .config(['$mdThemingProvider', function ($mdThemingProvider) {
