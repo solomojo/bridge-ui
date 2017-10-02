@@ -1,0 +1,6 @@
+{
+  "version": "2.0.6",
+  "mwHost": "https://inside.lingotek.com",
+  "mwApi": "/api/v2",
+  "baseUrlLogos": "http://devzone.lingotek.com/img/logos/"
+}
