@@ -59,7 +59,7 @@ h1:
 규칙: [textunit]
 [아이디]
 h2:
- 규칙: [textunit]
+규칙: [textunit]
 [아이디]
 h3:
 규칙: [textunit]
@@ -123,7 +123,7 @@ bdo:
 큰:
 규칙: [인라인]
 깜박임:
- 규칙: [인라인]
+규칙: [인라인]
 br:
 규칙: [인라인]
 단추:
@@ -187,7 +187,7 @@ nobr:
 translatableAttributes: [대기]
 param:
 규칙: [인라인]
- translatableAttributes: [값]
+translatableAttributes: [값]
 q:
 규칙: [인라인]
 s:
@@ -251,7 +251,7 @@ rtc:
 
 # 제외 요소
 '.*':
- rultypes: [제외]
+rultypes: [제외]
 조건: [번역, 같음, ' 아니오 ']
 
 스타일:
