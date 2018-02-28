@@ -1,0 +1,262 @@
+﻿assummewellformed: 거짓
+preserve_whitespace: 진정한
+견적 정의: true
+quomode: 3
+usecodefinder: true
+\ncount.i 규칙: "#v1 = 4 \ nrule0 = [@!%] [-Za-z-_] + \n 규칙 1 =% [0-9] + \n 규칙 2 = \\ [\\w +: \\w + \\] \n 규칙 3 =% (([-0 + #]?) [-0 + #]?) (\\d\\ $)? (([\\d\\ *] *) (\\. [ \\d\\ *] *)? [[다이옥신] [0-9] * \n 샘플 =% d% s1 $0a $% 1% 10 $0a $ [개체: 값] $0a $ @name! user_name% 캐 노 니 컬-url $0a $ \ \ = true "
+특성:
+dir:
+규칙: [ATTRIBUTE_WRITABLE]
+allelementexcept: [베이스, basefront, 헤드, html, 메타, param, 스크립트]
+제목:
+규칙: [ATTRIBUTE_TRANS]
+allelementexcept: [베이스, basefront, 머리, html, 메타, param, 스크립트, 제목]
+랭:
+규칙: [ATTRIBUTE_WRITABLE]
+xml: lang:
+규칙: [ATTRIBUTE_WRITABLE]
+요소:
+메타:
+규칙: [ATTRIBUTES_ONLY]
+translatableAttributes:
+콘텐츠:
+-[http-equiv, 같음, 키워드]
+--이름
+-같음
+-[키워드, 설명]
+다음 속성:
+콘텐츠:
+-http-equiv
+-같음
+-[내용 언어, 내용 유형]
+문자 집합: null
+속성:
+콘텐츠:
+-이름
+-같음
+-[발전기, 저자, progid, 날짜]
+영역:
+규칙: [ATTRIBUTES_ONLY]
+translatableAttributes: [accesskey, 지역, alt]
+isindex:
+규칙: [ATTRIBUTES_ONLY]
+translatableAttributes: [프롬프트]
+옵션:
+규칙: [ATTRIBUTES_ONLY]
+translatableAttributes: [레이블, 값]
+optgroup:
+규칙: [ATTRIBUTES_ONLY]
+translatableAttributes: [레이블]
+주소:
+규칙: [textunit]
+[아이디]
+drupalvar:
+rultypes: [인라인, 제외]
+dt:
+규칙: [textunit]
+[아이디]
+h1:
+규칙: [textunit]
+[아이디]
+h2:
+ 규칙: [textunit]
+[아이디]
+h3:
+규칙: [textunit]
+[아이디]
+h4:
+규칙: [textunit]
+[아이디]
+h5:
+규칙: [textunit]
+[아이디]
+h6:
+규칙: [textunit]
+[아이디]
+범례:
+규칙: [textunit]
+translatableAttributes: [accesskey]
+[아이디]
+리튬:
+규칙: [textunit]
+translatableAttributes: [값]
+[아이디]
+움직이는:
+규칙: [textunit]
+[아이디]
+p:
+규칙: [textunit]
+[아이디]
+elementtype: 단락
+사전:
+rultypes: [textunit, PRESERVE_WHITESPACE]
+[아이디]
+td:
+규칙: [textunit]
+translatableAttributes: [abbr]
+[아이디]
+일:
+규칙: [textunit]
+[아이디]
+translatableAttributes: [abbr]
+제목:
+규칙: [textunit]
+[아이디]
+는:
+규칙: [인라인]
+elementtype: 링크
+translatableAttributes: [제목, accesskey]
+: [href]]
+
+abbr:
+규칙: [인라인]
+약어:
+규칙: [인라인]
+애플릿을:
+규칙: [인라인]
+translatableAttributes: [대체]
+b:
+규칙: [인라인]
+elementtype: 굵게
+bdo:
+규칙: [인라인]
+큰:
+규칙: [인라인]
+깜박임:
+ 규칙: [인라인]
+br:
+규칙: [인라인]
+단추:
+규칙: [인라인]
+translatableAttributes: [accesskey, 값]
+인용:
+규칙: [인라인]
+코드:
+규칙: [인라인]
+델:
+규칙: [인라인]
+dfn:
+규칙: [인라인]
+em:
+규칙: [인라인]
+포함:
+규칙: [인라인]
+글꼴:
+규칙: [인라인]
+나:
+규칙: [인라인]
+elementtype: 기울임꼴
+iframe:
+규칙: [인라인]
+img:
+규칙: [인라인]
+elementtype: 이미지
+translatableAttributes: [제목, alt, ' 데이터 캡션 ']
+입력:
+규칙: [인라인]
+translatableAttributes:
+alt:
+-유형
+-NOT_EQUALS
+-[파일, 숨김, 이미지, 비밀 번호]
+값:
+-유형
+-NOT_EQUALS
+-[파일, 숨김, 이미지, 비밀 번호]
+accesskey:
+-유형
+-NOT_EQUALS
+-[파일, 숨김, 이미지, 비밀 번호]
+제목:
+-유형
+-NOT_EQUALS
+-[파일, 숨김, 이미지, 비밀 번호]
+기능:
+규칙: [인라인]
+kbd:
+규칙: [인라인]
+레이블:
+규칙: [인라인]
+translatableAttributes: [accesskey]
+지도:
+규칙: [인라인]
+nobr:
+규칙: [인라인]
+개체:
+규칙: [인라인]
+translatableAttributes: [대기]
+param:
+규칙: [인라인]
+ translatableAttributes: [값]
+q:
+규칙: [인라인]
+s:
+규칙: [인라인]
+samp:
+규칙: [인라인]
+작은:
+규칙: [인라인]
+선택:
+규칙: [인라인]
+범위:
+규칙: [인라인]
+스페이서:
+규칙: [인라인]
+파업:
+규칙: [인라인]
+강한:
+규칙: [인라인]
+하위:
+규칙: [인라인]
+sup:
+규칙: [인라인]
+기호:
+규칙: [인라인]
+테이블:
+규칙: [ATTRIBUTES_ONLY]
+translatableAttributes: [요약]
+textarea:
+규칙: [인라인]
+translatableAttributes: [accesskey]
+tt:
+규칙: [인라인]
+u:
+규칙: [인라인]
+elementtype: 밑줄이 그어진
+var:
+규칙: [인라인]
+wbr:
+규칙: [인라인]
+루비:
+규칙: [인라인]
+rb:
+규칙: [인라인]
+rt:
+규칙: [인라인]
+rc:
+규칙: [인라인]
+rp:
+규칙: [인라인]
+rbc:
+규칙: [인라인]
+rtc:
+규칙: [인라인]
+
+#로 보 도움말 인라인 태그
+기호:
+규칙: [인라인]
+
+얼굴:
+규칙: [인라인]
+
+# 제외 요소
+'.*':
+ rultypes: [제외]
+조건: [번역, 같음, ' 아니오 ']
+
+스타일:
+rultypes: [제외]
+stylesheet:
+rultypes: [제외]
+스크립트:
+rultypes: [제외]
