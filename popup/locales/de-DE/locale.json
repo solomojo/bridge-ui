@@ -1,7 +1,7 @@
 {
   "header_name": "Name",
   "header_source": "Quelle",
-  "header_translations": "Übersetzungen",
+  "header_translations": "Bearbeiteten ÜberSetzungen",
 
   "msg_config_options": "Konfigurationsoptionen:",
   "msg_delete_modal_title": "Übersetzungen werden dauerhaft aus gelöscht werden",
